@@ -1,5 +1,6 @@
-import Link from "next/link"
-import { MapPin, Mail, Phone } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,10 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-serif font-bold text-lg mb-4">Pesona Budaya Banyuwangi</h3>
-            <p className="text-sm opacity-90">
-              Menjelajahi kekayaan budaya, tradisi, dan keindahan alam Banyuwangi - The Sunrise of Java.
-            </p>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-14 h-14 relative">
+                <Image src="/Lambang_Kabupaten_Banyuwangi.png" alt="Lambang Kabupaten Banyuwangi" fill className="object-contain" />
+              </div>
+              <h3 className="font-serif font-bold text-lg">Pesona Budaya Banyuwangi</h3>
+            </div>
+            <p className="text-sm opacity-90">Menjelajahi kekayaan budaya, tradisi, dan keindahan alam Banyuwangi - The Sunrise of Java.</p>
           </div>
 
           {/* Quick Links */}
@@ -46,7 +50,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Hubungi Kami</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
+                <MapPin size={16} className="mt-0.5 shrink-0" />
                 <span>Banyuwangi, Jawa Timur, Indonesia</span>
               </div>
               <div className="flex items-center gap-2">
@@ -66,5 +70,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
